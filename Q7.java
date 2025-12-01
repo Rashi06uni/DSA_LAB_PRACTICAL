@@ -1,4 +1,4 @@
-// Create a linear queue using an array with methods for enqueue, dequeue, and checking if the queue is empty or fu
+// Create a linear queue using an array with methods for enqueue, dequeue, and checking if the queue is empty or fuLL
 
 class LinearQueue {
     int[] arr;
@@ -65,6 +65,9 @@ class LinearQueue {
 public class Q7 {
     public static void main(String[] args) {
         LinearQueue q = new LinearQueue(5);
+
+        System.out.println("RASHI YADAV "); 
+        System.out.println("2401350003 ");
 
         q.enqueue(10);
         q.enqueue(20);

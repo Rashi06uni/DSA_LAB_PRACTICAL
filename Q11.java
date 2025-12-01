@@ -75,6 +75,9 @@ public class Q11 {
 
     public static void main(String[] args) {
 
+        System.out.println("RASHI YADAV "); 
+        System.out.println("2401350003 ");
+
         int[] sizes = {100, 500, 1000, 5000};
 
         for (int size : sizes) {

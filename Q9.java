@@ -16,6 +16,9 @@ public class Q9 {
 
     public static void main(String[] args) {
 
+        System.out.println("RASHI YADAV "); 
+        System.out.println("2401350003 ");
+
         int[] arr = {10, 20, 30, 40, 50};
         int target = 30;
 

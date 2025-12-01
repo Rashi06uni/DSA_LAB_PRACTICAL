@@ -1,3 +1,5 @@
+//Given preorder and inorder traversal of a tree, construct the binary tree
+
 import java.util.HashMap;
 
 class TreeNode {
@@ -9,7 +11,7 @@ class TreeNode {
     }
 }
 
-public class Q13 {
+public class Q13{
 
   
     private static HashMap<Integer, Integer> inorderMap = new HashMap<>();
@@ -47,6 +49,10 @@ public class Q13 {
     }
 
     public static void main(String[] args) {
+
+        System.out.println("RASHI YADAV "); 
+        System.out.println("2401350003 ");
+
         int[] preorder = {3, 9, 20, 15, 7};
         int[] inorder = {9, 3, 15, 20, 7};
 

@@ -59,6 +59,10 @@ class Stack {
 
 public class Q5 {
     public static void main(String[] args) {
+
+        System.out.println("RASHI YADAV "); 
+        System.out.println("2401350003 ");
+        
         Stack s = new Stack(5);
 
         s.push(10);

@@ -4,7 +4,7 @@ import java.util.*;
 
 public class Q12 {
 
-
+    // ---------------- QUICK SORT (with Random Pivot) ---------------- //
     public static void quickSort(int[] arr, int low, int high) {
         if (low < high) {
             int pivotIndex = partition(arr, low, high);
@@ -14,28 +14,31 @@ public class Q12 {
     }
 
     private static int partition(int[] arr, int low, int high) {
-        int pivot = arr[high]; 
+
+        //  Random Pivot to avoid worst-case recursion
+        int randomIndex = low + new Random().nextInt(high - low + 1);
+        swap(arr, randomIndex, high);
+
+        int pivot = arr[high];
         int i = low - 1;
 
         for (int j = low; j < high; j++) {
-            if (arr[j] <= pivot) {  
+            if (arr[j] <= pivot) {
                 i++;
                 swap(arr, i, j);
             }
         }
 
         swap(arr, i + 1, high);
-        return (i + 1);
+        return i + 1;
     }
 
-
+    // ---------------- MERGE SORT ---------------- //
     public static void mergeSort(int[] arr, int left, int right) {
         if (left < right) {
             int mid = left + (right - left) / 2;
-
             mergeSort(arr, left, mid);
             mergeSort(arr, mid + 1, right);
-
             merge(arr, left, mid, right);
         }
     }
@@ -53,7 +56,7 @@ public class Q12 {
         int i = 0, j = 0, k = left;
 
         while (i < n1 && j < n2) {
-            if (L[i] <= R[j]) {   
+            if (L[i] <= R[j]) {
                 arr[k++] = L[i++];
             } else {
                 arr[k++] = R[j++];
@@ -64,7 +67,7 @@ public class Q12 {
         while (j < n2) arr[k++] = R[j++];
     }
 
-
+    // ---------------- HEAP SORT ---------------- //
     public static void heapSort(int[] arr) {
         int n = arr.length;
 
@@ -94,7 +97,7 @@ public class Q12 {
         }
     }
 
-
+    // ---------------- UTILITY FUNCTIONS ---------------- //
     private static void swap(int[] arr, int i, int j) {
         int temp = arr[i];
         arr[i] = arr[j];
@@ -105,16 +108,17 @@ public class Q12 {
         Random rand = new Random();
         int[] arr = new int[size];
         for (int i = 0; i < size; i++)
-            arr[i] = rand.nextInt(10000);   
+            arr[i] = rand.nextInt(10000);
         return arr;
     }
 
     public static int[] generateNearlySortedArray(int size) {
         int[] arr = generateRandomArray(size);
         Arrays.sort(arr);
-       
+
         for (int i = 0; i < size / 20; i++)
-            arr[i] = arr[i] + (i % 5);
+            arr[i] = arr[i] + (i % 7);
+
         return arr;
     }
 
@@ -130,11 +134,14 @@ public class Q12 {
             heapSort(arr);
         long end = System.nanoTime();
 
-        System.out.println(algorithm.toUpperCase() + " Sort Time: " + (end - start) + " ns");
+        System.out.println(algorithm.toUpperCase() + " Sort Time = " + (end - start) + " ns");
     }
 
-
+    // ---------------- MAIN PROGRAM ---------------- //
     public static void main(String[] args) {
+
+        System.out.println("RASHI YADAV");
+        System.out.println("2401350003");
 
         int[] sizes = {1000, 5000, 10000, 20000};
 
@@ -144,15 +151,16 @@ public class Q12 {
             int[] randomInput = generateRandomArray(size);
             int[] nearlySortedInput = generateNearlySortedArray(size);
 
-            System.out.println("\n-- Random Input --");
+            System.out.println("\n-- RANDOM INPUT --");
             measure("quick", randomInput);
             measure("merge", randomInput);
             measure("heap", randomInput);
 
-            System.out.println("\n-- Nearly Sorted Input --");
+            System.out.println("\n-- NEARLY SORTED INPUT --");
             measure("quick", nearlySortedInput);
             measure("merge", nearlySortedInput);
             measure("heap", nearlySortedInput);
         }
     }
 }
+

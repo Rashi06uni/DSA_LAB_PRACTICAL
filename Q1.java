@@ -4,6 +4,8 @@ import java.util.*;
 
 public class    Q1 {
     public static void main(String[] args) {
+         System.out.println("RASHI YADAV ");
+         System.out.println("2401350003 ");
         Scanner sc = new Scanner(System.in);
 
         int[] arr = new int[100]; 

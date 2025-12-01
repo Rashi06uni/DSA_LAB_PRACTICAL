@@ -1,3 +1,5 @@
+//Implement  Prim's and Kruskal’s algorithm to find the minimum spanning tree of a graph. 
+
 import java.util.*;
 
 class Edge implements Comparable<Edge> {
@@ -132,6 +134,9 @@ public class Q15 {
     }
 
     public static void main(String[] args) {
+
+        System.out.println("RASHI YADAV "); 
+        System.out.println("2401350003 ");
 
         Q15 g = new Q15(5);
 

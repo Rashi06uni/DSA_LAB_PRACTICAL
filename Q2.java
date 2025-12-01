@@ -1,5 +1,6 @@
 // Write a program to implement a singly linked list with methods to insert an element at the head, insert an element at the tail, delete an element by value, and traverse the list to print all elements
 
+
 class Node {
     int data;
     Node next;
@@ -82,6 +83,9 @@ class SinglyLinkedList {
 public class    Q2 {
     public static void main(String[] args) {
         SinglyLinkedList list = new SinglyLinkedList();
+
+        System.out.println("RASHI YADAV "); 
+        System.out.println("2401350003 ");
 
         list.insertAtHead(10);
         list.insertAtHead(20);

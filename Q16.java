@@ -1,3 +1,5 @@
+// Implement Dijkstra’s algorithm to find the shortest path from a source vertex to all other vertices in a weighted graph. Use both adjacency matrix and adjacency list representations for the graph. Ensure the algorithm handles negative weights appropriately.
+
 import java.util.*;
 
 class Edge {
@@ -97,6 +99,9 @@ public class Q16 {
     }
 
     public static void main(String[] args) {
+
+        System.out.println("RASHI YADAV "); 
+        System.out.println("2401350003 ");
 
         Scanner sc = new Scanner(System.in);
 

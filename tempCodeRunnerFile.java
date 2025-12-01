@@ -1,5 +1,3 @@
-//Perform the traversal of graph(DFS,BFS)
-
 import java.util.*;
 
 public class Q14 {

@@ -68,6 +68,10 @@ public class Q6 {
         return result.toString();
     }
     public static void main(String[] args) {
+
+        System.out.println("RASHI YADAV "); 
+        System.out.println("2401350003 ");
+
         String exp = "A+(B*C-(D/E^F)*G)*H";
         System.out.println("Infix Expression : " + exp);
         System.out.println("Postfix Expression : " + infixToPostfix(exp));
